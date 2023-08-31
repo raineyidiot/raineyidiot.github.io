@@ -1,6 +1,11 @@
 /* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
+html{
+	
+   cursor: url('paw.png'), auto;
+	
+}
 
 body {
   background-color: black;
@@ -13,8 +18,7 @@ body {
   font-family: Verdana;
   font-size: 18px;
   line-height: 1.4;
-  margin: 0 1%;
-   cursor: url('paw.png'), auto;
+  margin: 0 3%;
   }
   
 ul
