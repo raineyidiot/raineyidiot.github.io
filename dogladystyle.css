@@ -1,0 +1,73 @@
+html{
+	
+   cursor: url('images/paw.png'), auto;
+	
+}
+
+body {
+         background-image: url("images/loveless.gif");
+		 background-repeat: no-repeat;
+		background-attachment: fixed;
+		  background-size: cover;
+         text-align: center;
+         font-family: PC-98;
+         }
+         
+         @font-face {
+    font-family: 'PC-98'; /*a name to be used later*/
+    src: url('pc-9800.ttf'); /*URL to font*/
+}
+      
+    #demobox {
+  width: 900px;
+  margin: auto;
+  border: 5px groove white;
+  text-align:left; 
+  font-size:22px;
+  background-color: #c4dbba;
+  font-family: PC-98;
+  padding: 15px;
+  color: black;
+  background:linear-gradient(#ddd5de, #ddd5de, #ddd5de)
+    }
+	.topnav {
+  width: 900px;
+  margin: auto;
+  border: 5px groove white;
+  text-align:center; 
+  font-size:20px;
+  background-color: #c4dbba;
+  font-family: PC-98;
+  padding: 15px;
+  color: black;
+  background:linear-gradient(#ddd5de, #ddd5de, #ddd5de)
+    }
+	
+	#guestbook	{
+  width: 600px;
+  margin: auto;
+  border: 5px groove white;
+  text-align:center;
+  font-size:20px;
+  background-color: #ddd5de;
+  font-family: PC-98;
+  padding: 15px;
+  color: black;
+  background:linear-gradient(#ddd5de, #ddd5de, #ddd5de)
+    }
+	
+    
+   
+@media (orientation: portrait) {
+ .flandre {
+      display: none;
+	}
+}
+
+@media (orientation: landscape) {
+ .flandre {
+      position: fixed;
+      bottom: 0px;
+      filter: drop-shadow(0 0 0.75rem white);
+	}
+}
