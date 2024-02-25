@@ -57,8 +57,17 @@ body {
     }
 	
     
-    .flandre {
+   
+@media (orientation: portrait) {
+ .flandre {
+      display: none;
+	}
+}
+
+@media (orientation: landscape) {
+ .flandre {
       position: fixed;
       bottom: 0px;
       filter: drop-shadow(0 0 0.75rem white);
-    
+	}
+}
