@@ -1,11 +1,5 @@
-html{
-	
-   cursor: url('images/paw.png'), auto;
-	
-}
-
 body {
-         background-image: url("images/loveless.gif");
+         background-image: url("images/bg.png");
 		 background-repeat: no-repeat;
 		background-attachment: fixed;
 		  background-size: cover;
@@ -21,39 +15,35 @@ body {
     #demobox {
   width: 700px;
   margin: auto;
-  border: 5px groove white;
   text-align:left; 
   font-size:22px;
   background-color: #c4dbba;
   font-family: PC-98;
   padding: 15px;
-  color: black;
-  background:linear-gradient(#ddd5de, #ddd5de, #ddd5de)
+  color: white;
+  background:linear-gradient(#393939, #393939, #242424)
     }
 	.topnav {
   width: 700px;
   margin: auto;
-  border: 5px groove white;
   text-align:center; 
-  font-size:20px;
+  font-size:26px;
   background-color: #c4dbba;
   font-family: PC-98;
   padding: 15px;
-  color: black;
-  background:linear-gradient(#ddd5de, #ddd5de, #ddd5de)
+  color: white;
+  background:linear-gradient(#090C1E, #090C1E, #252737)
     }
 	
 	#guestbook	{
   width: 600px;
   margin: auto;
-  border: 5px groove white;
+  border: 1px solid pink;
   text-align:center;
   font-size:20px;
-  background-color: #ddd5de;
   font-family: PC-98;
   padding: 15px;
-  color: black;
-  background:linear-gradient(#ddd5de, #ddd5de, #ddd5de)
+	color: white;
     }
 	
     
@@ -68,6 +58,16 @@ body {
  .flandre {
       position: fixed;
       bottom: 0px;
-      filter: drop-shadow(0 0 0.75rem white);
 	}
+}
+a:link {
+  color: #FFD1EC;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FF7CCA;
+  background-color: transparent;
+  text-decoration: none;
 }
