@@ -57,18 +57,17 @@ function onMouseDown(ev) {
   drag = true;
   kickFlipperElement.src = "kickin.gif";
 
-  // Calculate offset between mouse position and element's top-left corner
+  // calculate offset from top-left of image's bounding rect
   const rect = kickFlipperElement.getBoundingClientRect();
   offsetX = ev.clientX - rect.left;
   offsetY = ev.clientY - rect.top;
   kickFlipperElement.classList.add("skewflipper");
 
-  ev.preventDefault(); // Prevent text selection while dragging
+  ev.preventDefault();
 }
 
 function onMouseMove(ev) {
   if (drag) {
-    // Position element so the click point stays under the cursor
     kickFlipperElement.style.transform = `rotateZ(${timer}deg)`;
     kickFlipperElement.style.left = ev.pageX - offsetX;
     kickFlipperElement.style.top = ev.pageY - offsetY;
