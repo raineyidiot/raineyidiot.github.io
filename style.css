@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'pc-98';
+  src: url('pc-9800.ttf');
+}
+
+body {
+  font-family: pc-98;
+  background-image: url('tempbg.png');
+  background-repeat: no-repeat;
+  z-index: -20;
+  height: 100vh;
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  font-size: 36px; 
+  font-weight: bold;
+  color: #FF4F86;
+  font-smooth: never;
+  z-index: 1;
+  align-self: center;
+  margin-top: 8px;
+}
+
+.page-body {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.site-header-outline {
+  font-size: 36px; 
+  font-weight: bold;
+  -webkit-text-stroke-color: #FF4F86;
+  -webkit-text-stroke: 15px white;
+  align-self: center;
+  font-smooth: never;
+  position: absolute;
+  margin-top: 8px;
+  z-index: -1;
+}
+
+.cluster-row {
+  display: flex;
+  justify-content: center;
+}
+
+.cluster-row > a {
+  font-family: pc-98;
+  color: #FF4F86;
+  background-color: white;
+  font-size: 24px;
+  width: 33%;
+  text-align: center;
+  padding: 4px;
+  margin: 0px 3px 6px 3px;
+  text-decoration: none;
+}
+
+.home-summary {
+  flex-grow: 1;
+  background-color: white;
+  color: #FF4F86;
+  margin: 0 4px 4px 4px;
+}
+
+.nav-cluster {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 90%;
+  margin-bottom: 8px;
+}
+
+.mobile-users-die {
+  margin-bottom: 8px;
+  width: 60%;
+}
+
+.mobile-die-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+}
+
+.aoi-sora {
+  position: fixed;
+  bottom: -120px;
+  left: -100px;
+  transform: scale(0.5);
+  filter: hue-rotate(90deg);
+}
+
+#kickflipper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skewflipper {
+  transform: skewX(45deg);
+}
+
+@media (width >= 450px) {
+  .mobile-users-die {
+    visibility: hidden;
+  }
+}
+
+@media (width >= 768px) {
+  .page-body {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .home-summary {
+    flex-grow: 0;
+  }
+
+  .nav-cluster {
+    width: 30%;
+  }
+
+  .cluster-row {
+    min-width: 30%;
+    overflow-wrap: break-word;
+    flex-direction: column;
+    width: auto;
+  }
+}
