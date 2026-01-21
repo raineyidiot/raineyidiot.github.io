@@ -1,14 +1,44 @@
 @font-face {
   font-family: 'pc-98';
-  src: url('pc-9800.ttf');
+  src: url('/pc-9800.ttf');
 }
 
 body {
   font-family: pc-98;
-  background-image: url('tempbg.png');
+  background-image: url('/tempbg.png');
   background-repeat: no-repeat;
   z-index: -20;
   height: 100vh;
+}
+
+.webring-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.webring img {
+  max-height: 100%;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  animation: webring-marquee;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+.webring {
+  border: 2px solid red;
+  margin: 16px 16px 16px 0;
+  max-height: 100px; 
+  width: 50%;
+  overflow: hidden;
+}
+
+.wikipe {
+  visibility: hidden;
+  position: fixed;
 }
 
 .page-container {
@@ -70,6 +100,25 @@ body {
   background-color: white;
   color: #FF4F86;
   margin: 0 4px 4px 4px;
+  text-align: center;
+}
+
+.post-container {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.post-timestamp {
+  margin-right: 8px;
+  margin-left: 10px;
+  color: red;
+}
+
+.post-container span, a {
+  margin-top: 6px;
+  display: inline-block;
+  align-self: center;
 }
 
 .nav-cluster {
@@ -96,13 +145,15 @@ body {
   bottom: -120px;
   left: -100px;
   transform: scale(0.5);
-  filter: hue-rotate(90deg);
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
 }
 
 #kickflipper {
   position: absolute;
   top: 0;
   left: 0;
+  visibility: hidden;
 }
 
 .skewflipper {
@@ -117,7 +168,6 @@ body {
 
 @media (width >= 768px) {
   .page-body {
-    flex-grow: 1;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -125,7 +175,63 @@ body {
   }
 
   .home-summary {
-    flex-grow: 0;
+    flex-grow: 2;
+    background-color: white;
+    color: #FF4F86;
+    margin: 0 4px 0 4px;
+    text-align: center;
+    padding: 0 16px 0 16px;
+  }
+
+  .home-summary h1 {
+      font-size: 48px;
+  }
+
+  .home-summary p {
+    text-align: left; 
+    font-size: 24px;
+  }
+
+  .aoi-sora {
+    position: fixed;
+    bottom: -60px;
+    left: -15px;
+    transform: scale(1.0);
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+  }
+
+  .webring-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .webring img {
+    max-height: 100%;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    animation: webring-marquee;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+  }
+
+  .webring {
+    border: 2px solid red;
+    margin: 16px 16px 16px 0;
+    max-height: 100px; 
+    width: 30%;
+    overflow: hidden;
+  }
+
+
+  .wikipe {
+    position: absolute;
+    right: 75px;
+    top: 100px;
+    visibility: visible;
   }
 
   .nav-cluster {
@@ -133,9 +239,87 @@ body {
   }
 
   .cluster-row {
-    min-width: 30%;
+    min-width: 25%;
     overflow-wrap: break-word;
     flex-direction: column;
+    align-self: flex-start;
     width: auto;
+    display: flex;
+  }
+
+  .cluster-row:last-of-type {
+    flex-direction: column;
+    align-self: flex-end;
+  }
+
+  .cluster-row a {
+    align-self: center;
+    width: 90%;
+    font-size: 48px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: bold;
+    margin: 8px;
+  }
+
+  #first-left {
+    margin-top: 0px;
+  }
+
+  #last-right {
+    margin-bottom: 0px;
+  }
+
+
+  .site-header {
+    font-size: 72px;
+  }
+
+  .site-header-outline {
+    font-size: 72px; 
+    font-weight: bold;
+    -webkit-text-stroke-color: #FF4F86;
+    -webkit-text-stroke: 25px white;
+    align-self: center;
+    font-smooth: never;
+    position: absolute;
+    margin-top: 8px;
+    z-index: -1;
+  }
+
+  #kickflipper {
+    visibility: visible;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes webring-marquee {
+  from {
+    transform: translateX(300%);
+  }
+
+  to {
+    transform: translateX(-300%);
+  }
+}
+
+@keyframes shes-rainbow {
+  from {
+    filter: hue-rotate(0);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rotate-flipper {
+  from {
+    transform: rotateZ(0);
+  }
+
+  to {
+    transform: rotateZ(360deg);
   }
 }
