@@ -17,14 +17,14 @@ body {
   justify-content: flex-end;
 }
 
-.webring img {
+.webring a {
   max-height: 100%;
   padding-right: 16px;
   padding-top: 16px;
   padding-bottom: 16px;
   animation: webring-marquee;
   animation-iteration-count: infinite;
-  animation-duration: 3s;
+  animation-duration: 7s;
   animation-timing-function: linear;
 }
 
@@ -207,14 +207,14 @@ body {
     justify-content: center;
   }
 
-  .webring img {
+  .webring a {
     max-height: 100%;
     padding-right: 16px;
     padding-top: 16px;
     padding-bottom: 16px;
     animation: webring-marquee;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
+    animation-duration: 7s;
     animation-timing-function: linear;
   }
 
@@ -296,7 +296,7 @@ body {
 
 @keyframes webring-marquee {
   from {
-    transform: translateX(300%);
+    transform: translateX(600%);
   }
 
   to {
