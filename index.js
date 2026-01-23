@@ -84,6 +84,7 @@ function onMouseDown(ev) {
   const rect = kickFlipperElement.getBoundingClientRect();
   offsetX = ev.clientX - rect.left;
   offsetY = ev.clientY - rect.top;
+  console.log(`${offsetX}, ${offsetY}`);
   kickFlipperElement.classList.add("skewflipper");
 
   ev.preventDefault();
@@ -91,9 +92,10 @@ function onMouseDown(ev) {
 
 function onMouseMove(ev) {
   if (drag) {
+    console.log('here now');
     kickFlipperElement.style.setProperty("animation-name", "rotate-flipper");
-    kickFlipperElement.style.left = ev.pageX - offsetX;
-    kickFlipperElement.style.top = ev.pageY - offsetY;
+    kickFlipperElement.style.setProperty("left", `${ev.pageX - offsetX}px`);
+    kickFlipperElement.style.setProperty("top", `${ev.pageY - offsetY}px`);
   }
 }
 
